@@ -12,8 +12,8 @@ use Rex::IO::Client;
 # the __io__ task gets executed by the agent
 task __io__ => sub {
 
-   file "/etc/resolv.conf",
-      content => template("templates/etc/resolv.conf", cmdb_get("service://ntp/configuration"));
+   file "/etc/ntp.conf",
+      content => template("templates/etc/ntp.conf", cmdb_get("service://ntp/configuration"));
 
 };
 
