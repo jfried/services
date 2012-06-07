@@ -1,0 +1,12 @@
+name: ntp
+description: NTP Service
+variables:
+   configuration:
+      restrict:
+         default:
+            - 127.0.0.1
+            - 192.168.0.15
+         type: array
+      server:
+         default: ntp.local.lan
+         type: string
